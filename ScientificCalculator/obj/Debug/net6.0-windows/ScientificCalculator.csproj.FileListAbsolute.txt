@@ -1,0 +1,17 @@
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\ScientificCalculator.exe
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\ScientificCalculator.deps.json
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\ScientificCalculator.runtimeconfig.json
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\ScientificCalculator.dll
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\ScientificCalculator.pdb
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.csproj.AssemblyReference.cache
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.Form1.resources
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.csproj.GenerateResource.cache
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.AssemblyInfoInputs.cache
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.AssemblyInfo.cs
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.csproj.CoreCompileInputs.cache
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.dll
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\refint\ScientificCalculator.dll
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.pdb
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.genruntimeconfig.cache
+C:\Users\akemboi\source\repos\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ref\ScientificCalculator.dll
