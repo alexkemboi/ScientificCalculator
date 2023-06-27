@@ -76,10 +76,10 @@
             screenOneTextBox.Enabled = false;
             screenOneTextBox.Font = new Font("Impact", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             screenOneTextBox.ForeColor = Color.ForestGreen;
-            screenOneTextBox.Location = new Point(0, 68);
+            screenOneTextBox.Location = new Point(0, 3);
             screenOneTextBox.Multiline = true;
             screenOneTextBox.Name = "screenOneTextBox";
-            screenOneTextBox.Size = new Size(381, 49);
+            screenOneTextBox.Size = new Size(381, 114);
             screenOneTextBox.TabIndex = 1;
             screenOneTextBox.Text = "0";
             // 
@@ -296,8 +296,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Controls.Add(screenTextBox);
             panel2.Controls.Add(screenOneTextBox);
+            panel2.Controls.Add(screenTextBox);
             panel2.Location = new Point(11, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(381, 117);
@@ -491,7 +491,7 @@
             btnMultiply.Name = "btnMultiply";
             btnMultiply.Size = new Size(91, 90);
             btnMultiply.TabIndex = 28;
-            btnMultiply.Text = "X";
+            btnMultiply.Text = "*";
             btnMultiply.UseVisualStyleBackColor = false;
             btnMultiply.Click += OperatorButton_Click;
             // 

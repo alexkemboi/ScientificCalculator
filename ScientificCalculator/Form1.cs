@@ -3,6 +3,7 @@ namespace ScientificCalculator
     public partial class Form1 : Form
     {
         private string storedOperator = null;
+        private string operaterSymbol = null;
         private double currentValue = 0;
         private double storedValue = 0;
         public Form1(string storedOperator, int currentValue, int storedValue)
@@ -29,15 +30,15 @@ namespace ScientificCalculator
         private void OperatorButton_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            storedOperator = button.Text;
+            operaterSymbol = button.Text;
             screenTextBox.Text = storedValue.ToString();
-            StoreValueAndOperator(storedOperator);
+            StoreValueAndOperator(operaterSymbol);
         }
-        private void StoreValueAndOperator(string storedOperator)
+        private void StoreValueAndOperator(string operaterSymbol)
         {
 
             // Perform calculation if there is already a stored operator
-            if (storedOperator != null)
+            if (storedOperator!=null)
             {
                 switch (storedOperator)
                 {
@@ -58,6 +59,7 @@ namespace ScientificCalculator
 
             UpdateDisplay();
             // Store the current value and the selected operator
+            storedOperator = operaterSymbol;
             storedValue = currentValue;
             screenTextBox.Text = storedValue.ToString();
 
