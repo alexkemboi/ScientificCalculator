@@ -2,148 +2,79 @@ namespace ScientificCalculator
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string storedOperator = null;
+        private double currentValue = 0;
+        private double storedValue = 0;
+        public Form1(string storedOperator, int currentValue, int storedValue)
         {
             InitializeComponent();
+            this.storedOperator = storedOperator;
+            this.currentValue = currentValue;
+            this.storedValue = storedValue;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void NumberBtn_Click(object sender, EventArgs e)
         {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnOne.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnOne.Text;
-            }
+            Button button = (Button)sender;
+            string number = button.Text;
+            currentValue = (currentValue * 10) + double.Parse(number);
+            UpdateDisplay();
+        }
+        public void UpdateDisplay()
+        {
+            screenOneTextBox.Text = currentValue.ToString();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void OperatorButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            storedOperator = button.Text;
+            screenTextBox.Text = storedValue.ToString();
+            StoreValueAndOperator(storedOperator);
+        }
+        private void StoreValueAndOperator(string storedOperator)
         {
 
-        }
+            // Perform calculation if there is already a stored operator
+            if (storedOperator != null)
+            {
+                switch (storedOperator)
+                {
+                    case "+":
+                        currentValue = storedValue + currentValue;
+                        break;
+                    case "-":
+                        currentValue = storedValue - currentValue;
+                        break;
+                    case "*":
+                        currentValue = storedValue * currentValue;
+                        break;
+                    case "/":
+                        currentValue = storedValue / currentValue;
+                        break;
+                }
+            }
 
-        private void button19_Click(object sender, EventArgs e)
+            UpdateDisplay();
+            // Store the current value and the selected operator
+            storedValue = currentValue;
+            screenTextBox.Text = storedValue.ToString();
+
+            // Reset the current value for the next input
+            currentValue = 0;
+        }
+        private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnTwo.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnTwo.Text;
-            }
+            StoreValueAndOperator(storedOperator);
         }
-
         private void button29_Click(object sender, EventArgs e)
         {
-            screenTextBox.Text = "0";
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnThree.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnThree.Text;
-            }
-        }
-
-        private void btnFour_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnFour.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnFour.Text;
-            }
-        }
-        private void btnFive_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnFive.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnFive.Text;
-            }
-        }
-        private void btnSix_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnSix.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnSix.Text;
-            }
-        }
-        private void btnSeven_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnSeven.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnSeven.Text;
-            }
-        }
-        private void btnEight_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnEight.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnEight.Text;
-            }
-        }
-        private void btnNine_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnNine.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnNine.Text;
-            }
-        }
-        private void btnZero_Click(object sender, EventArgs e)
-        {
-            if (double.Parse(screenTextBox.Text) == 0)
-            {
-                screenTextBox.Text = btnZero.Text;
-            }
-            else
-            {
-                screenTextBox.Text = screenTextBox.Text + btnZero.Text;
-            }
-        }
-        private void btnPoint_Click(object sender, EventArgs e)
-        {
-
-            
-                if (screenTextBox.Text.Contains(btnPoint.Text))
-                {
-
-                    screenTextBox.Text = screenTextBox.Text;
-                }
-                else
-                {
-                    screenTextBox.Text = screenTextBox.Text + btnPoint.Text;
-                }
-            
+            currentValue = 0;
+            storedValue = 0;
+            storedOperator = "";
+            screenTextBox.Text = currentValue.ToString();
+            UpdateDisplay();
         }
     }
 }

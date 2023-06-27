@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            screenTextBox = new TextBox();
+            screenOneTextBox = new TextBox();
             button1 = new Button();
             button13 = new Button();
             button2 = new Button();
@@ -46,7 +46,7 @@
             button15 = new Button();
             button16 = new Button();
             button17 = new Button();
-            textBox1 = new TextBox();
+            screenTextBox = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
             btnOne = new Button();
@@ -60,27 +60,28 @@
             btnNine = new Button();
             btnZero = new Button();
             btnPoint = new Button();
-            button29 = new Button();
+            btnClear = new Button();
             btnSubtract = new Button();
             btnAdd = new Button();
             btnDivide = new Button();
             btnMultiply = new Button();
             btnEqual = new Button();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // screenTextBox
+            // screenOneTextBox
             // 
-            screenTextBox.BackColor = SystemColors.MenuText;
-            screenTextBox.BorderStyle = BorderStyle.None;
-            screenTextBox.Enabled = false;
-            screenTextBox.Font = new Font("Impact", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
-            screenTextBox.ForeColor = Color.White;
-            screenTextBox.Location = new Point(12, 12);
-            screenTextBox.Multiline = true;
-            screenTextBox.Name = "screenTextBox";
-            screenTextBox.Size = new Size(377, 48);
-            screenTextBox.TabIndex = 1;
-            screenTextBox.Text = "0";
+            screenOneTextBox.BackColor = SystemColors.MenuText;
+            screenOneTextBox.BorderStyle = BorderStyle.None;
+            screenOneTextBox.Enabled = false;
+            screenOneTextBox.Font = new Font("Impact", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            screenOneTextBox.ForeColor = Color.ForestGreen;
+            screenOneTextBox.Location = new Point(0, 68);
+            screenOneTextBox.Multiline = true;
+            screenOneTextBox.Name = "screenOneTextBox";
+            screenOneTextBox.Size = new Size(381, 49);
+            screenOneTextBox.TabIndex = 1;
+            screenOneTextBox.Text = "0";
             // 
             // button1
             // 
@@ -92,7 +93,6 @@
             button1.TabIndex = 2;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // button13
             // 
@@ -259,7 +259,6 @@
             button16.TabIndex = 25;
             button16.Text = "-";
             button16.UseVisualStyleBackColor = false;
-            button16.Click += button16_Click;
             // 
             // button17
             // 
@@ -272,19 +271,19 @@
             button17.Text = "=";
             button17.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // screenTextBox
             // 
-            textBox1.BackColor = SystemColors.MenuText;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Impact", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.Window;
-            textBox1.Location = new Point(12, 66);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(380, 51);
-            textBox1.TabIndex = 30;
-            textBox1.Text = "0";
+            screenTextBox.BackColor = SystemColors.MenuText;
+            screenTextBox.BorderStyle = BorderStyle.None;
+            screenTextBox.Enabled = false;
+            screenTextBox.Font = new Font("Impact", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            screenTextBox.ForeColor = SystemColors.Window;
+            screenTextBox.Location = new Point(-2, 11);
+            screenTextBox.Multiline = true;
+            screenTextBox.Name = "screenTextBox";
+            screenTextBox.Size = new Size(380, 51);
+            screenTextBox.TabIndex = 30;
+            screenTextBox.Text = "0";
             // 
             // panel1
             // 
@@ -297,6 +296,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
+            panel2.Controls.Add(screenTextBox);
+            panel2.Controls.Add(screenOneTextBox);
             panel2.Location = new Point(11, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(381, 117);
@@ -312,7 +313,7 @@
             btnOne.TabIndex = 2;
             btnOne.Text = "1";
             btnOne.UseVisualStyleBackColor = false;
-            btnOne.Click += button1_Click;
+            btnOne.Click += NumberBtn_Click;
             // 
             // btnTwo
             // 
@@ -324,7 +325,7 @@
             btnTwo.TabIndex = 14;
             btnTwo.Text = "2";
             btnTwo.UseVisualStyleBackColor = false;
-            btnTwo.Click += button19_Click;
+            btnTwo.Click += NumberBtn_Click;
             // 
             // btnFive
             // 
@@ -336,6 +337,7 @@
             btnFive.TabIndex = 15;
             btnFive.Text = "5";
             btnFive.UseVisualStyleBackColor = false;
+            btnFive.Click += NumberBtn_Click;
             // 
             // btnSix
             // 
@@ -347,7 +349,7 @@
             btnSix.TabIndex = 16;
             btnSix.Text = "6";
             btnSix.UseVisualStyleBackColor = false;
-            btnSix.Click += btnSix_Click;
+            btnSix.Click += NumberBtn_Click;
             // 
             // btnThree
             // 
@@ -359,7 +361,7 @@
             btnThree.TabIndex = 17;
             btnThree.Text = "3";
             btnThree.UseVisualStyleBackColor = false;
-            btnThree.Click += button22_Click;
+            btnThree.Click += NumberBtn_Click;
             // 
             // btnFour
             // 
@@ -371,7 +373,7 @@
             btnFour.TabIndex = 18;
             btnFour.Text = "4";
             btnFour.UseVisualStyleBackColor = false;
-            btnFour.Click += btnFour_Click;
+            btnFour.Click += NumberBtn_Click;
             // 
             // btnSeven
             // 
@@ -383,7 +385,7 @@
             btnSeven.TabIndex = 19;
             btnSeven.Text = "7";
             btnSeven.UseVisualStyleBackColor = false;
-            btnSeven.Click+= btnSeven_Click;
+            btnSeven.Click += NumberBtn_Click;
             // 
             // btnEight
             // 
@@ -395,7 +397,7 @@
             btnEight.TabIndex = 20;
             btnEight.Text = "8";
             btnEight.UseVisualStyleBackColor = false;
-            btnEight.Click += btnEight_Click;
+            btnEight.Click += NumberBtn_Click;
             // 
             // btnNine
             // 
@@ -407,7 +409,7 @@
             btnNine.TabIndex = 21;
             btnNine.Text = "9";
             btnNine.UseVisualStyleBackColor = false;
-            btnNine.Click += btnNine_Click;
+            btnNine.Click += NumberBtn_Click;
             // 
             // btnZero
             // 
@@ -419,7 +421,7 @@
             btnZero.TabIndex = 22;
             btnZero.Text = "0";
             btnZero.UseVisualStyleBackColor = false;
-            btnZero.Click += btnZero_Click;
+            btnZero.Click += NumberBtn_Click;
             // 
             // btnPoint
             // 
@@ -431,20 +433,19 @@
             btnPoint.TabIndex = 23;
             btnPoint.Text = ".";
             btnPoint.UseVisualStyleBackColor = false;
-            btnPoint.Click += btnPoint_Click;
             // 
-            // button29
+            // btnClear
             // 
-            button29.BackColor = SystemColors.ActiveCaption;
-            button29.Font = new Font("Impact", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            button29.ForeColor = Color.Chocolate;
-            button29.Location = new Point(303, 318);
-            button29.Name = "button29";
-            button29.Size = new Size(91, 90);
-            button29.TabIndex = 24;
-            button29.Text = "AC";
-            button29.UseVisualStyleBackColor = false;
-            button29.Click += button29_Click;
+            btnClear.BackColor = SystemColors.ActiveCaption;
+            btnClear.Font = new Font("Impact", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.ForeColor = Color.Chocolate;
+            btnClear.Location = new Point(303, 318);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(91, 90);
+            btnClear.TabIndex = 24;
+            btnClear.Text = "AC";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += button29_Click;
             // 
             // btnSubtract
             // 
@@ -456,7 +457,7 @@
             btnSubtract.TabIndex = 25;
             btnSubtract.Text = "-";
             btnSubtract.UseVisualStyleBackColor = false;
-            btnSubtract.Click += button16_Click;
+            btnSubtract.Click += OperatorButton_Click;
             // 
             // btnAdd
             // 
@@ -468,6 +469,7 @@
             btnAdd.TabIndex = 26;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += OperatorButton_Click;
             // 
             // btnDivide
             // 
@@ -479,6 +481,7 @@
             btnDivide.TabIndex = 27;
             btnDivide.Text = "/";
             btnDivide.UseVisualStyleBackColor = false;
+            btnDivide.Click += OperatorButton_Click;
             // 
             // btnMultiply
             // 
@@ -490,6 +493,7 @@
             btnMultiply.TabIndex = 28;
             btnMultiply.Text = "X";
             btnMultiply.UseVisualStyleBackColor = false;
+            btnMultiply.Click += OperatorButton_Click;
             // 
             // btnEqual
             // 
@@ -501,13 +505,13 @@
             btnEqual.TabIndex = 29;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = false;
+            btnEqual.Click += btnEqual_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(404, 578);
-            Controls.Add(textBox1);
             Controls.Add(btnEqual);
             Controls.Add(button17);
             Controls.Add(btnMultiply);
@@ -518,7 +522,7 @@
             Controls.Add(button15);
             Controls.Add(btnSubtract);
             Controls.Add(button16);
-            Controls.Add(button29);
+            Controls.Add(btnClear);
             Controls.Add(button8);
             Controls.Add(btnPoint);
             Controls.Add(button9);
@@ -542,17 +546,17 @@
             Controls.Add(button13);
             Controls.Add(btnOne);
             Controls.Add(button1);
-            Controls.Add(screenTextBox);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Calculator";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private TextBox screenTextBox;
+        private TextBox screenOneTextBox;
         private Button button1;
         private Button button13;
         private Button button2;
@@ -570,7 +574,7 @@
         private Button button15;
         private Button button16;
         private Button button17;
-        private TextBox textBox1;
+        private TextBox screenTextBox;
         private Panel panel1;
         private Panel panel2;
         private Button btnOne;
@@ -584,7 +588,7 @@
         private Button button26;
         private Button button27;
         private Button button28;
-        private Button button29;
+        private Button btnClear;
         private Button button30;
         private Button button31;
         private Button button32;
